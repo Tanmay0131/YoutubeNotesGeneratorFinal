@@ -341,4 +341,4 @@ def get_transcript_from_youtube_url(video_url):
 #     return 'File not found', 404
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5501) 
+    app.run(host="0.0.0.0", port=5000)
