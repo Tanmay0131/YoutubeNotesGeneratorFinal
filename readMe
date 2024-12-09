@@ -1,0 +1,46 @@
+Just run app.py (and maybe go to index.html in templates if it doesnt show you the page)
+
+For the YouTube link: Paste in any video's entire YouTube link (transcript or not)
+
+PS: If no transcript, then the page will take longer to produce results.
+
+For the API key: If you know the developer (me), then I can send you a free API key to use. If not, follow the following steps to get your own free one:
+
+1. Create or Log in to Your Gemini Account
+    If you don’t have an account:
+        Go to Gemini's website and click "Get Started".
+        Complete the registration process by entering your email, creating a password, and verifying your identity if needed.
+    If you already have an account:
+        Log in with your email and password.
+2. Enable Two-Factor Authentication (2FA)
+    Navigate to "Account Settings" (usually accessible via your profile icon or menu).
+    Find the 2FA Settings section and enable two-factor authentication for added security.
+        You can typically use an authenticator app like Google Authenticator or Authy.
+3. Access the API Key Management Section
+    Once logged in, go to the "Account Settings" menu.
+    Look for the "API" or "API Keys" section.
+4. Create a New API Key
+    Click the "Create API Key" button.
+    Gemini may prompt you to confirm your password or authenticate with 2FA for security.
+5. Set API Key Permissions
+    Choose the permissions you want for the API key. Common options include:
+        Read-only: For viewing account details and balances.
+        Trading: To place and cancel orders.
+        Withdrawals: (Not recommended unless necessary).
+    For security, start with only the permissions you need.
+6. Generate and Secure Your API Key
+    Gemini will generate:
+        API Key: A public identifier for accessing the API.
+        API Secret: A private key used to authenticate requests.
+    Important: Copy and save both the API key and secret securely. The secret is shown only once.
+        Store them in a password manager or a secure file.
+7. Test Your API Key
+    Use Gemini's API documentation to test your new key with a simple request.
+    Tools like Postman or programming languages like Python (using requests or Gemini API SDKs) can help verify functionality.
+8. Monitor and Manage Your Keys
+    Regularly review your API keys in the "API Management" section.
+    Revoke unused keys and regenerate keys if you suspect a compromise.
+Security Tips:
+    Never share your API secret with anyone.
+    Avoid enabling unnecessary permissions.
+    Use IP address whitelisting if available to restrict access to your keys.

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher's Assistant Tool</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #1c1c1e;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1.5px;
+        }
+
+        .container {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1c1c1e;
+        }
+
+        label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .download-link {
+            margin-top: 20px;
+        }
+
+        .download-link a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        /* Loader Styles */
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid #4CAF50;
+            width: 60px;
+            height: 60px;
+            animation: spin 2s linear infinite;
+            display: none;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Teacher's Assistant Tool</h1>
+    </header>
+
+    <div class="container">
+        <h2>Generate Study Materials</h2>
+        <form id="youtubeForm">
+            <label for="youtube-link">YouTube Video Link</label>
+            <input type="url" id="youtube-link" name="youtube_link" placeholder="Enter YouTube video URL" required>
+            <label for="api-key">API Key</label>
+            <input type="text" id="api-key" name="api_key" placeholder="Enter your API key" required>
+            <button type="submit" id="generateBtn">Generate</button>
+        </form>
+        <div class="loader" id="loader"></div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('youtubeForm').onsubmit = function (event) {
+            event.preventDefault();
+
+            const youtubeLink = document.getElementById('youtube-link').value;
+            const apiKey = document.getElementById('api-key').value;
+            const generateBtn = document.getElementById('generateBtn');
+            const loader = document.getElementById('loader');
+
+            // Disable button and show loader
+            generateBtn.disabled = true;
+            loader.classList.add('loading');
+
+            fetch(`http://127.0.0.1:5501/process`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ youtubeLink: youtubeLink, apiKey: apiKey })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Data received:", data);
+                    if (data.error) {
+                        alert(data.error);
+                    } else {
+                        const resultDiv = document.getElementById('result');
+                        resultDiv.innerHTML = `
+                            <h3>Download Your Files:</h3>
+                            <div class="download-link">
+                                <a href="/download/response">Download Notes</a><br>
+                                <a href="/download/questions">Download Questions</a><br>
+                                <a href="/download/answers">Download Answers</a><br>
+                            </div>
+                            <p><strong>Google Form Link:</strong> <a href="${data.formUrl}" target="_blank">${data.formUrl}</a></p>
+                        `;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error occurred:', error);
+                    alert('An error occurred. Please try again.');
+                })
+                .finally(() => {
+                    // Enable the button and hide loader after the process completes
+                    loader.classList.remove('loading');
+                    generateBtn.disabled = false;
+                });
+        };
+    </script>
+
+</body>
+
+</html>

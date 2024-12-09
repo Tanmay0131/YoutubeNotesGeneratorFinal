@@ -1,0 +1,162 @@
+[
+    {
+        "question": "What is the goal of the experiment in the video?",
+        "options": [
+            "To determine if ChatGPT can beat \"Pajama Sam\" as Pajama Sam.",
+            "To create a new AI voice for Pajama Sam.",
+            "To see if ChatGPT can understand and respond to questions in character.",
+            "To test the limits of AI's ability to play video games."
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What major challenge did ChatGPT face in the experiment?",
+        "options": [
+            "Maintaining a consistent voice and personality.",
+            "Solving the game's puzzles.",
+            "Understanding the game's mechanics.",
+            "All of the above."
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "Which of the following was NOT a solution used to address ChatGPT's challenges?",
+        "options": [
+            "Requiring shorter, more coherent answers.",
+            "Providing direct hints or instructions.",
+            "Using a different AI voice generator.",
+            "Resetting the AI's memory."
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What unexpected comedic element emerged from ChatGPT's inconsistencies?",
+        "options": [
+            "Its strange, nonsensical speech patterns.",
+            "Its British accent.",
+            "Its random use of asterisks.",
+            "All of the above."
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "Which of the following is NOT a takeaway from the experiment?",
+        "options": [
+            "AI can play and beat a children's game.",
+            "AI is not yet capable of understanding complex game mechanics.",
+            "AI can be used to create entertaining content.",
+            "AI is capable of learning and adapting over time."
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What is the name of the character who is a communist vegetable?",
+        "options": [
+            "EXO",
+            "Otto",
+            "Mud",
+            "Gomper"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What is the name of the Demon Lord that Sam encounters in the game?",
+        "options": [
+            "Eldrin",
+            "Algorithm",
+            "Darkness",
+            "Lightning Dank"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the name of the game Sam is playing?",
+        "options": [
+            "Pajama Sam: No Need to Hide When It's Dark Outside",
+            "Pajama Sam: You Are What You Eat",
+            "Pajama Sam: Lost in the Land of Darkness",
+            "Pajama Sam: The Adventures of Pajama Sam"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the name of the song that plays in the furniture room?",
+        "options": [
+            "The Furniture Dance",
+            "The Darkness Boogie",
+            "The Pajama Sam Theme",
+            "The Tic-Tac-Toe Tune"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the name of the game that Sam plays with the toaster?",
+        "options": [
+            "Cheese and Crackers",
+            "Tic-Tac-Toe",
+            "The Furniture Dance",
+            "The Darkness Boogie"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the name of the AI voice that is used for Pajama Sam?",
+        "options": [
+            "PointCrow",
+            "Failboat",
+            "Sandwich",
+            "None of the above"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What is the name of the special item that Sam uses to open the closet door?",
+        "options": [
+            "A golden doorknob",
+            "A pickaxe",
+            "A magnet",
+            "A can of oil"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What does Sam learn from the dancing furniture?",
+        "options": [
+            "How to boogie.",
+            "How to play Tic-Tac-Toe.",
+            "How to defeat Darkness.",
+            "How to make a fishing pole."
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What does Sam do to help Mud, the mine cart?",
+        "options": [
+            "He uses a pickaxe to break the rust.",
+            "He uses a can of oil to lubricate the wheels.",
+            "He uses a magnet to pull the rust off.",
+            "He uses a fishing pole to pull Mud off the tracks."
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the name of the room that contains the chemistry set?",
+        "options": [
+            "The Kitchen",
+            "The Furniture Room",
+            "The Outhouse",
+            "The Mines"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the name of the room that contains the Tic-Tac-Toe game?",
+        "options": [
+            "The Kitchen",
+            "The Furniture Room",
+            "The Outhouse",
+            "The Tic-Tac-Toe Park"
+        ],
+        "correctAnswer": "D"
+    }
+]
